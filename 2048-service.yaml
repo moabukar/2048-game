@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: game-2048
+  name: service-2048
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: alb-ip
+spec:
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
